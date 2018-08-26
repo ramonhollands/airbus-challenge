@@ -22,8 +22,8 @@ class CoordTransform(Transform):
     def get_bbox_coordinates(image):
 
         '''
-        returns four corners for the mask
-        top-left, top-right, bottom-left, bottom-right
+        returns four corners for the mask in numpy format (y,x)
+        top (y,x), right (y,x), left (y,x), bottom (y,x)
         '''
         shape = image.shape
         nonzeros = image.nonzero()
